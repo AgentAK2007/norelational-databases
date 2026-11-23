@@ -77,7 +77,6 @@ async function main() {
   const frenchUsers = await users.find({ "address.country": "France" }).toArray();
   console.log("\nUsers in France:");
   frenchUsers.forEach((user) => console.log(user.name));
-
   // TODO 7: find all users who have a skills field and log their names.
   const skilledUsers = await users.find({ skills: { $exists: true } }).toArray();
   console.log("\nUsers with skills:");
